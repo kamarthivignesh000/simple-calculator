@@ -1,0 +1,75 @@
+        -:    0:Source:test.c
+        -:    0:Programs:5
+        -:    1:#include<stdio.h>
+        -:    2:#include "func.h"
+        -:    3:#include "unity_internals.h"
+        -:    4:#include "unity.h"
+        -:    5:/**
+        -:    6: * @brief Simple calculator
+        -:    7: * 
+        -:    8: * @return int 
+        -:    9: */
+        1:   10:int sum(int a,int b)
+        1:   10-block  0
+        -:   11:{
+        1:   12:    return a+b+10;
+        1:   12-block  0
+        -:   13:}
+        -:   14:
+        5:   15:void setUp(void)
+        5:   15-block  0
+        -:   16:{
+        5:   17:}
+        -:   18:
+        5:   19:void tearDown(void)
+        5:   19-block  0
+        -:   20:{
+        5:   21:}
+        1:   22:void test_sum()
+        1:   22-block  0
+        -:   23:{
+        1:   24:    TEST_ASSERT_EQUAL(sum(20,10),40);
+        1:   24-block  0
+        -:   25:    //TEST_ASSERT_EQUAL(sum(INT_MAX,1),40);
+        1:   26:}
+        1:   27:void test_sub()
+        1:   27-block  0
+        -:   28:{
+        1:   29:    TEST_ASSERT_EQUAL(sub(20,10),10);
+        1:   29-block  0
+        -:   30:    //TEST_ASSERT_EQUAL(sum(INT_MAX,1),40);
+        1:   31:}
+        1:   32:void test_prod()
+        1:   32-block  0
+        -:   33:{
+        1:   34:    TEST_ASSERT_EQUAL(prod(20,10),200);
+        1:   34-block  0
+        -:   35:    //TEST_ASSERT_EQUAL(sum(INT_MAX,1),40);
+        1:   36:}
+        1:   37:void test_div()
+        1:   37-block  0
+        -:   38:{
+        1:   39:    TEST_ASSERT_EQUAL(div(20,10),2);
+        1:   39-block  0
+        -:   40:    //TEST_ASSERT_EQUAL(sum(INT_MAX,1),40);
+        1:   41:}
+        1:   42:void test_mod()
+        1:   42-block  0
+        -:   43:{
+        1:   44:    TEST_ASSERT_EQUAL(mod(20,10),0);
+        1:   44-block  0
+        -:   45:    //TEST_ASSERT_EQUAL(sum(INT_MAX,1),40);
+        1:   46:}
+        1:   47:int main(void)
+        1:   47-block  0
+        -:   48:{
+        1:   49:  UnityBegin("testsum ");
+        1:   49-block  0
+        1:   50:  RUN_TEST(test_sum);
+        1:   51:  RUN_TEST(test_sub);
+        1:   52:  RUN_TEST(test_prod);
+        1:   53:  RUN_TEST(test_div);
+        1:   54:  RUN_TEST(test_mod);
+        1:   55:  return (UnityEnd());
+        -:   56:}
+        -:   57:

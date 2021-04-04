@@ -1,0 +1,9 @@
+        -:    0:Source:prod.c
+        -:    0:Programs:5
+        -:    1:#include "func.h"
+        1:    2:int prod(int a,int b)
+        1:    2-block  0
+        -:    3:{
+        1:    4:    return a*b;
+        1:    4-block  0
+        -:    5:}
