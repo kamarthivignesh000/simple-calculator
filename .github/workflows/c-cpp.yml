@@ -9,12 +9,10 @@ on:
 jobs:
   build:
 
-    runs-on: windows
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
       
     - name: make all
-      run:  make all -C simple-calculator/calculator/
-
-
+      run:  make all -C simple-calculator/
