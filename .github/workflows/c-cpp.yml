@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Linux C/C++ CI
 
 on:
   push:
@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
-    - name: make all
-      run:  make all -C simple-calculator/calculator/
+    - name: build
+      run: gcc test.c -o test.exe
+    - name: Run
+      run: ./test.exe
